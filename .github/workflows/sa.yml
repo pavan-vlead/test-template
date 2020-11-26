@@ -11,7 +11,7 @@ jobs:
     - uses: EndBug/label-sync@v1
       with:
         # This is needed in order to edit the labels
-        token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         
 
 
