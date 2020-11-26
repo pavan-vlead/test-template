@@ -6,7 +6,7 @@ on:
   push:
 # mentioning which branch should be used to build the experimnet
     branches: 
-      - main
+      - testing
 jobs:
   build:
     runs-on: ubuntu-latest
