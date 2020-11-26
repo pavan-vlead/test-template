@@ -1,12 +1,12 @@
 ## more info https://github.com/crazy-max/ghaction-github-labeler
 - # automerge
-  name: ":bell: automerge"
-  color: "8f4fbc"
-  description: ""
+  name: ":: storyboarding"
+  color: "f4ccff"
+  description: "To be applied for storyboarding related issues"
 - # bot
-  name: ":robot: bot"
-  color: "69cde9"
-  description: ""
+  name: ":: pedagogy"
+  color: "8641c1"
+  description: "To be applied for pedagogy related issues"
 - # bug
   name: ":bug: bug"
   color: "b60205"
