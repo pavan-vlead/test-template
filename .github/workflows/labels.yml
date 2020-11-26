@@ -18,17 +18,16 @@ jobs:
       -
         name: Run Labeler
         uses: crazy-max/ghaction-github-labeler@v3
-            - uses: actions/checkout@v2
     # The following job will delete the script that creates dev and testing branches 
-   - uses: actions/checkout@v2
-   - run: |
-        git config --local user.email "admin@vlabs.ac.in"
-        git config --local user.name "vleadadmin"
-        git checkout main
-        git rm -rf .github/workflows/labels.yml
-        git commit -m "Script which created dev and testing branches is deleted."
-    - uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
-        force: true
-        branch: main
+      - uses: actions/checkout@v2
+      - run: |
+          git config --local user.email "admin@vlabs.ac.in"
+          git config --local user.name "vleadadmin"
+          git checkout main
+          git rm -rf .github/workflows/labels.yml
+          git commit -m "Script which created dev and testing branches is deleted."
+      - uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+          force: true
+          branch: main
