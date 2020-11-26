@@ -18,7 +18,6 @@ jobs:
         # If you want to use a source repo, you can put is name here (only the owner/repo format is accepted)
         source-repo: virtual-labs/ph3-exp-template
         # If you're using a private source repo, you'll need to add a custom token for the action to read it
-        source-repo-token: ${{ secrets.ORG_OWNER_PH3_TEMPLATE }}
 
         # If you want to delete any additional label, set this to true
         delete-other-labels: false
