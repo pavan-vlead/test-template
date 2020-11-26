@@ -1,16 +1,27 @@
-name: Actions
-# This workflow is triggered when a label is added to an issue.
-on:
-  issues:
-    types: labeled
-
+name: Sync labels
+on: 
+  # You can run this with every type of event, but it's better to run it only when you actually need it.
+  workflow_dispatch:
+  
 jobs:
-  processLabelAction:
-    name: Process Label Action
+  labels:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v2
-      - name: Process Label Action
-        uses: hramos/label-actions@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: EndBug/label-sync@v1
+      with:
+        # This is needed in order to edit the labels
+        token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+        
+
+
+        # If you want to use a source repo, you can put is name here (only the owner/repo format is accepted)
+        source-repo: virtual-labs/ph3-exp-template/
+        # If you're using a private source repo, you'll need to add a custom token for the action to read it
+        source-repo-token: ${{ secrets.ORG_OWNER_GITHUB_TOKEN }}
+
+        # If you want to delete any additional label, set this to true
+        delete-other-labels: false
+
+        #If you want the action just to show you the preview of the changes, without actually editing the labels, set this to tru
+        dry-run: true
