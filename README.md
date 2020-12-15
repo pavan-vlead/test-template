@@ -22,4 +22,4 @@ Type here: brief description of this experiment
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
 1 | . | . | . | . | .
-2 | . | . | . | . | .
+2 | . | . | . | . | .   
